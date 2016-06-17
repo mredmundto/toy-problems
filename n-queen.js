@@ -3,7 +3,7 @@ var table2 = [[1,0,0,0],[1,0,0,0],[1,0,0,0],[1,0,0,0]] // Columns
 var table3 = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]] // Major Diagonal 
 var table4 = [[0,0,1,0],[0,0,0,1],[0,0,0,0],[0,0,0,0]] // Small Major Diagonal 
 var table5 = [[0,0,0,1],[0,0,1,0],[0,1,0,0],[1,0,0,0]] // Minor Diagonal 
-var table6 = [[0,0,0,0],[0,0,0,0],[1,0,0,0],[0,1,0,0]] // Small Minor Diagonal 
+var table6 = [[0,0,0,0],[0,0,0,0],[0,0,0,1],[0,0,1,0]] // Small Minor Diagonal 
 
 
 Array.prototype.checkColumn = function(){
@@ -38,7 +38,20 @@ Array.prototype.checkDiagonal = function(){
 		}
 		count = 0; 
 	}
-		
+	
+
+	for (var j = -len; j < len; j++){
+		for (var i = 0; i < len; i++){
+			if (this[i][len-1-i+j] !== undefined){
+				count+= this[i][len-1-i+j]
+				if(count > 1){
+				return false
+				}	
+			}
+		}
+		count = 0; 		
+	}
+
 	// check Minor Diagonal 
 	return true; 
 	
@@ -60,4 +73,10 @@ console.log("Small Major Diagonal conflict")
 console.log(table4.checkColumn()) 
 console.log(table4.checkDiagonal())
 
+console.log("Minor Diagonal conflict")
+console.log(table5.checkColumn())
+console.log(table5.checkDiagonal())
 
+console.log("Small Minor Diagonal conflict")
+console.log(table6.checkColumn()) 
+console.log(table6.checkDiagonal())
