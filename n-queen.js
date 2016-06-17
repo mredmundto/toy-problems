@@ -1,9 +1,38 @@
-var table1 = [[0,0,1,0],[1,0,0,0],[0,0,0,1],[0,1,0,0]] // Good case
-var table2 = [[1,0,0,0],[1,0,0,0],[1,0,0,0],[1,0,0,0]] // Columns 
-var table3 = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]] // Major Diagonal 
-var table4 = [[0,0,1,0],[0,0,0,1],[0,0,0,0],[0,0,0,0]] // Small Major Diagonal 
-var table5 = [[0,0,0,1],[0,0,1,0],[0,1,0,0],[1,0,0,0]] // Minor Diagonal 
-var table6 = [[0,0,0,0],[0,0,0,0],[0,0,0,1],[0,0,1,0]] // Small Minor Diagonal 
+var table1 = [
+[0,0,1,0],
+[1,0,0,0],
+[0,0,0,1],
+[0,1,0,0]] // Good case
+
+var table2 = [
+[1,0,0,0],
+[1,0,0,0],
+[1,0,0,0],
+[1,0,0,0]] // Columns 
+
+var table3 = [
+[1,0,0,0],
+[0,1,0,0],
+[0,0,1,0],
+[0,0,0,1]] // Major Diagonal 
+
+var table4 = [
+[0,0,1,0],
+[0,0,0,1],
+[0,0,0,0],
+[0,0,0,0]] // Small Major Diagonal 
+
+var table5 = [
+[0,0,0,1],
+[0,0,1,0],
+[0,1,0,0],
+[1,0,0,0]] // Minor Diagonal 
+
+var table6 = [
+[0,0,0,0],
+[0,0,0,0],
+[0,0,0,1],
+[0,0,1,0]] // Small Minor Diagonal 
 
 
 Array.prototype.checkColumn = function(){
