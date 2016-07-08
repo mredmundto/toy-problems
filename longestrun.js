@@ -42,4 +42,6 @@ console.log(longestRun("aabbc"));
 console.log(longestRun("abcd"));
 console.log(longestRun(""));
 console.log(longestRun("aaaaaabbcccbbbbbbb")); 
+
+// testing from gitgoing
  
